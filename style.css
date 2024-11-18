@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #1e3a8a, #1d4ed8);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(15, 50px);
+    gap: 8px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #f1f5f9;
+    box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.1), 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #ffffff, #98c3ff);
+    color: #2c3e50;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.key:hover {
+    background: linear-gradient(145deg, #82baff, #4fa3f7);
+    transform: translateY(+3px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.special-key {
+    background: linear-gradient(145deg, #63b3ed, #4299e1);
+    color: #ffffff;
+}
+
+.Backspace,
+.Tab,
+.CapsLock,
+.Enter {
+    grid-column: span 2;
+}
+
+.Shift.shiftleft {
+    grid-column: span 3;
+}
+
+.Shift.shiftright {
+    grid-column: span 2;
+}
+
+.Space {
+    grid-column: span 5;
+    height: 50px;
+}
+
+#numpadblock {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    gap: 8px;
+    margin-left: 10px;
+}
+
+.extra {
+    background: linear-gradient(145deg, #dbeafe, #c3dafe);
+    color: #2c3e50;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.ArrowLeft,
+.ArrowRight,
+.ArrowUp,
+.ArrowDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.updown {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(145deg, #ffffff, #98c3ff);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.up,
+.down {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #ffffff;
+    background: linear-gradient(145deg, #ffffff, #98c3ff);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.up:hover,
+.down:hover {
+    background-color: #4fa3f7;
+    transform: translateY(+3px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.up {
+    border-bottom: 1px solid #82baff;
+}
+
+.down {
+    border-top: 1px solid #82baff;
+}
